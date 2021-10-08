@@ -28,12 +28,13 @@ MVC web application to help a hair salon owner to manage thier employees (stylis
 5. Create a copy of the database by using the `anthony_mcrae.sql` file included in the repo using MySQL Workbench program.
 6. Create an `appsettings.json` file in the `\HairSalon` directory add the following code to the file:
 
->{
- > "ConnectionStrings":
-  >{
-   > "DefaultConnection": "Server=localhost;Port=3306;database={first_last};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
-  >}
->}
+<clipboard-copy {
+ "ConnectionStrings":
+  {
+    "DefaultConnection": "Server=localhost;Port=3306;database={first_last};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
+  }
+}>Copy</clipboard-copy>
+
 Be sure to replace {first_last} {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} with the appropriate terms.
 
 for {first_last}, this refers to the database or schema
