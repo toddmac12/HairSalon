@@ -27,22 +27,20 @@ MVC web application to help a hair salon owner to manage thier employees (stylis
 4. Navigate to the `\HairSalon` directory
 5. Create a copy of the database by using the `anthony_mcrae.sql` file included in the repo using MySQL Workbench program.
 6. Create an `appsettings.json` file in the `\HairSalon` directory add the following code to the file:
-
-<clipboard-copy {
+```
+{
  "ConnectionStrings":
   {
     "DefaultConnection": "Server=localhost;Port=3306;database={first_last};uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
   }
-}>Copy</clipboard-copy>
+}>Copy path</clipboard-copy>
+```
 
-Be sure to replace {first_last} {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} with the appropriate terms.
-
-for {first_last}, this refers to the database or schema
-
-make sure to replace this input with what you decide to name the schema/database
-for {YOUR_USERNAME_NAME} and {YOUR_PASSWORD}, this refers to your username and password for MySQL
-
-NOTE: Do not include the curly brackets in your code snippet of appsettings.json
+* Be sure to replace {first_last} {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} with the appropriate terms.
+* for {first_last}, this refers to the database or schema
+* make sure to replace this input with what you decide to name the schema/database
+* for {YOUR_USERNAME_NAME} and {YOUR_PASSWORD}, this refers to your username and password for MySQL
+* NOTE: Do not include the curly brackets in your code snippet of appsettings.json
 
 7. To run the application, using the terminal at the command prompt, type `dotnet run`
 8. Open` http://localhost:5000/` in your preferred browser
