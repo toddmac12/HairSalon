@@ -1,6 +1,0 @@
-{
-  "ConnectionStrings":
-  {
-    "DefaultConnection": "Server=localhost;Port=3306;database=anthony_mcrae;uid=root;pwd=aA5631422;"
-  }
-}
