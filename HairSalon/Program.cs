@@ -1,50 +1,20 @@
-using Microsoft.AspNetCore.Builder;
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using HairSalon.Models;
 
 namespace HairSalon
 {
-  public class Startup
+  public class Program
   {
-    public Startup(IWebHostEnvironment env)
+    public static void Main(string[] args)
     {
-      IConfigurationBuilder builder = new ConfigurationBuilder()
-      .SetBasePath(env.ContentRootPath)
-      .AddJsonFile("appsettings.json");
-      Configuration = builder.Build();
-    }
+      IWebHost host = new WebHostBuilder()
+      .UseKestrel()
+      .UseContentRoot(Directory.GetCurrentDirectory())
+      .UseIISIntegration()
+      .UseStartup<Startup>()
+      .Build();
 
-    public IConfigurationRoot Configuration { get; }
-
-    public void ConfigureServices(IServiceCollection services)
-    {
-      services.AddMvc();
-
-      services.AddEntityFrameworkMySql()
-        .AddDbContext<anthony_mcrae>(options => options
-        .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
-    }
-
-    public void Configure(IApplicationBuilder app)
-    {
-      app.UseDeveloperExceptionPage();
-      app.UseRouting();
-
-      app.UseEndpoints(routes =>
-      {
-        routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-      });
-
-      app.UseStaticFiles();
-
-      app.Run(async (context) =>
-      {
-        await context.Response.WriteAsync("Error: request failed- check your GET POST");
-      });
+      host.Run();
     }
   }
 }

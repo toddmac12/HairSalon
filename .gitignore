@@ -2,3 +2,6 @@
 */bin/
 */appsettings.json
 */vscode
+
+.fake
+.ionide
