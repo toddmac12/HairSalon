@@ -36,10 +36,10 @@ MVC web application to help a hair salon owner to manage thier employees (stylis
 }>Copy path</clipboard-copy>
 ```
 
-* Be sure to replace {first_last} {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} with the appropriate terms.
-* for {first_last}, this refers to the database or schema
+* Be sure to replace `{first_last} {YOUR_USERNAME_NAME}` and `{YOUR_PASSWORD}` with the appropriate terms.
+* for `{first_last}`, this refers to the database or schema
 * make sure to replace this input with what you decide to name the schema/database
-* for {YOUR_USERNAME_NAME} and {YOUR_PASSWORD}, this refers to your username and password for MySQL
+* for `{YOUR_USERNAME_NAME}` and `{YOUR_PASSWORD}`, this refers to your username and password for MySQL
 * NOTE: Do not include the curly brackets in your code snippet of appsettings.json
 
 7. To run the application, using the terminal at the command prompt, type `dotnet run`
