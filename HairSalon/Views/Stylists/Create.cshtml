@@ -1,0 +1,14 @@
+@model HairSalon.Models.Stylist
+
+<h1>Add Stylists</h1>
+@using (Html.BeginForm())
+{
+
+
+  <h4>@Html.LabelFor(model => model.StylistName):
+    @Html.TextBoxFor(model => model.StylistName, new {required = "required"})
+
+    @Html.LabelFor(model => model.StylistDescription):
+    @Html.TextBoxFor(model => model.StylistDescription, new {required = "required"})</h4>
+}
+<h4>@Html.ActionLink("Show all Stylists", "Index")</h4>
