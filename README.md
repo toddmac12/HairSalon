@@ -17,6 +17,9 @@ MVC web application to help a hair salon owner to manage thier employees (stylis
 *download .NET 5.0 SDK  [Click on link for macOS](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer) , [Click on link for Windows 64](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.401-windows-x64-installer)
 * Open Terminal
 * Text Editor (Visual Studio Code)
+  ## Schema
+!(Schema.jpg)
+Format: ![Schema image](url)
 
 ## Installation Requirements
 1. Clone this repository in your preferred directory using `https://github.com/toddmac12/HairSalon.git`
