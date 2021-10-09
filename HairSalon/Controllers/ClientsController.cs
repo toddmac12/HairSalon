@@ -9,8 +9,8 @@ namespace HairSalon.Controllers
 {
   public class ClientsController : Controller
   {
-    private readonly HairSalonContext  _db;
-    public ClientsController(HairSalonContext  db)
+    private readonly HairSalonContext _db;
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
 
@@ -34,34 +34,38 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index");
     }
 
+    public ActionResult Details(int id)
+    {
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      return View(thisClient);
+    }
+
     public ActionResult Edit(int id)
     {
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
-      return View();
+      return View(thisClient);
     }
-
-    [HttpPost]
+      [HttpPost]
     public ActionResult Edit(Client client)
     {
       _db.Entry(client).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+      public ActionResult Delete(int id)
+      {
+        Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+        return View(thisClient);
+      }
 
-    public ActionResult Delete(int id)
-    {
-      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-      return View(thisClient);
-    }
-
-    [HttpPost, ActionName("Delete")]
-    public ActionResult DeleteConfirmed(int id)
-    {
-      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-      _db.Clients.Remove(thisClient);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      [HttpPost, ActionName("Delete")]
+      public ActionResult DeleteConfirmed(int id)
+      {
+        Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+        _db.Clients.Remove(thisClient);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
     }
   }
-}
