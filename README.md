@@ -18,7 +18,7 @@ MVC web application to help a hair salon owner to manage thier employees (stylis
 * Open Terminal
 * Text Editor (Visual Studio Code)
   ## Schema
-![alt text](./Schema.jpg)
+![Schema Image](./Schema.jpg)
 
 ## Installation Requirements
 1. Clone this repository in your preferred directory using `https://github.com/toddmac12/HairSalon.git`
