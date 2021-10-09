@@ -11,14 +11,14 @@
 {
   <h4>@Html.HiddenFor(model => model.ClientId)
 
-  @Html.LabelFor(model => model.ClientName):
-  @Html.EditorFor(model => model.ClientName)
+    @Html.LabelFor(model => model.ClientName):
+    @Html.EditorFor(model => model.ClientName)
 
-  @Html.LabelFor(model => model.ClientDescription):
-  @Html.EditorFor(model => model.ClientDescription)
+    @Html.LabelFor(model => model.ClientDescription):
+    @Html.EditorFor(model => model.ClientDescription)
 
-  @Html.LabelFor(model => model.Stylist):
-  @Html.DropDownList("StylistId")</h4>
+    @Html.LabelFor(model => model.Stylist):
+    @Html.DropDownList("StylistId")</h4>
 
   <input type="submit" value="Save" class="btn" />
 }
