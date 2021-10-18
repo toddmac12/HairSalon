@@ -3,7 +3,8 @@
 }
 @model HairSalon.Models.Stylist
 
-<h1>Details for @Html.DisplayFor(model => model.StylistName)
+<h1>
+    Details for @Html.DisplayFor(model => model.StylistName)
 </h1>
 <h2>Stylist Speciaility:</h2>
 <p>@Html.DisplayFor(model => model.StylistDescription)</p>
@@ -11,12 +12,12 @@
 <h1>Current Client List:</h1>
 
 <h4>
-  <div class="client_list">
-    @foreach (HairSalon.Models.Client client in Model.Clients)
+    <div class="client_list">
+        @foreach (HairSalon.Models.Client client in Model.Clients)
     {
-      <li>Client: @Html.ActionLink($"{client.ClientName}", "Details", "Clients", new { id = client.ClientId })</li>
+        <li>Client: @Html.ActionLink($"{client.ClientName}", "Details", "Clients", new { id = client.ClientId })</li>
     }
-  </div>
+    </div>
 </h4>
 
 <h4>@Html.ActionLink("Add new Client", "Create", "Clients")</h4>

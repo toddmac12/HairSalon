@@ -6,3 +6,6 @@
 .fake
 .ionide
 .vscode
+*/vs
+*.vs
+*.json
